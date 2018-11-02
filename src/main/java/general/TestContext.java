@@ -2,7 +2,9 @@ package general;
 
 
 import lombok.Data;
+import pages.bcppage.BCPPageObject;
 import pages.landingpage.LandingPageObject;
+import pages.pdpage.PDPageObject;
 import pages.searchresults.SearchResultsPageObject;
 
 @Data
@@ -12,12 +14,16 @@ public class TestContext {
     private Booking booking;
     private LandingPageObject landingPage;
     private SearchResultsPageObject searchResultsPageObject;
+    private BCPPageObject bcpPageObject;
+    private PDPageObject pdPageObject;
 
     public TestContext() {
         this.user = new User();
         this.booking = new Booking();
         this.landingPage = new LandingPageObject();
         this.searchResultsPageObject = new SearchResultsPageObject();
+        this.bcpPageObject = new BCPPageObject();
+        this.pdPageObject = new PDPageObject();
 
     }
 

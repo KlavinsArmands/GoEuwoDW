@@ -1,8 +1,8 @@
 Feature: This feature is about successful booking of trip
   Scenario: Successful booking
     Given I am in homepage
-    And I set Berlin, Germany as departure place
-    And I set Munich, Germany as arrival place
+    And I set Rome, Italy as departure place
+    And I set Naples, Italy as arrival place
     And I unselect accommodation search
     When I click Search button
     And I select first train available
