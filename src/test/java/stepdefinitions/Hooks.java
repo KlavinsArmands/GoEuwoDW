@@ -17,7 +17,7 @@ public class Hooks {
 
     @Before
     public void openHomePage() {
-        open("https://www.goeuro.com/");
+        open("https://www.goeuro.com.qa.goeuro.ninja/");
     }
 
 
