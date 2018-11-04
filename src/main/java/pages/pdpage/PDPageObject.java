@@ -54,11 +54,11 @@ public class PDPageObject {
     }
 
     private SelenideElement getPrefixField() {
-        return $(By.xpath("//div[@class='_27rBF']"));
+        return $(By.xpath("//div[@data-e2e='phone-number-field-v2-dialling-code']"));
     }
 
     private SelenideElement getPrefixFieldElement() {
-        return $(By.xpath("//select[@class='_1Lm5H']//option[contains(text(), 'Latvia')]"));
+        return $(By.xpath("//div[@data-e2e='phone-number-field-v2-dialling-code']//option[contains(text(), 'Latvia')]"));
     }
 
     private SelenideElement getNumberField() {
@@ -79,6 +79,18 @@ public class PDPageObject {
 
     private SelenideElement getNextButton() {
         return $(By.xpath("//div[@class='Button_contents_556f2']//span[contains(text(), 'Next')]/../.."));
+    }
+
+    private SelenideElement getAddressOneField() {
+        return $(By.xpath("//input[@id='address1']"));
+    }
+
+    private SelenideElement getCityField() {
+        return $(By.xpath("//input[@id='city']"));
+    }
+
+    private SelenideElement getPostalCodeField() {
+        return $(By.xpath("//input[@id='zipCode']"));
     }
 
 
@@ -180,6 +192,22 @@ public class PDPageObject {
         }
     }
 
+    public void enterAddressOneField(String address) {
+        if (getAddressOneField().exists()) {
+            getAddressOneField().sendKeys(address);
+        }
+    }
 
+    public void enterCityField(String city) {
+        if (getCityField().exists()) {
+            getCityField().sendKeys(city);
+        }
+    }
+
+    public void enterPostalCodeField(String postalCode) {
+        if (getPostalCodeField().exists()) {
+            getPostalCodeField().sendKeys(postalCode);
+        }
+    }
 
 }
