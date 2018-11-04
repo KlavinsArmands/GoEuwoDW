@@ -28,8 +28,12 @@ public class PDPageObject {
         return $(By.xpath("//div[@class='Select_container_dc849']"));
     }
 
+    private SelenideElement getOldCountryField() {
+        return $(By.xpath("//div[@class='Select_container_d40a7']"));
+    }
+
     private SelenideElement getCountryFieldElement() {
-        return $(By.xpath("//select[@class='Select_select_dc849']"));
+        return $(By.xpath("//select[@name='passengers.0.components.countryOfResidence[0].countryCode']//option[contains(text(), 'Latvia')]"));
     }
 
 
@@ -50,11 +54,11 @@ public class PDPageObject {
     }
 
     private SelenideElement getPrefixField() {
-        return $(By.xpath("//div[@class='_27rBF']"));
+        return $(By.xpath("//div[@data-e2e='phone-number-field-v2-dialling-code']"));
     }
 
     private SelenideElement getPrefixFieldElement() {
-        return $(By.xpath("//select[@class='_1Lm5H']//option[contains(text(), 'Latvia')]"));
+        return $(By.xpath("//div[@data-e2e='phone-number-field-v2-dialling-code']//option[contains(text(), 'Latvia')]"));
     }
 
     private SelenideElement getNumberField() {
@@ -75,6 +79,18 @@ public class PDPageObject {
 
     private SelenideElement getNextButton() {
         return $(By.xpath("//div[@class='Button_contents_556f2']//span[contains(text(), 'Next')]/../.."));
+    }
+
+    private SelenideElement getAddressOneField() {
+        return $(By.xpath("//input[@id='address1']"));
+    }
+
+    private SelenideElement getCityField() {
+        return $(By.xpath("//input[@id='city']"));
+    }
+
+    private SelenideElement getPostalCodeField() {
+        return $(By.xpath("//input[@id='zipCode']"));
     }
 
 
@@ -99,15 +115,20 @@ public class PDPageObject {
     }
 
     public void selectCountryField() {
-        getCountryField().click();
+        if (getCountryField().exists()) {
+            getCountryField().click();
+        } else {
+            getOldCountryField().click();
+        }
     }
 
     public void selectCountryFieldElement() {
-        getCountryFieldElement().selectOptionContainingText("Latvia");
+        getCountryFieldElement().click();
     }
 
 
     public void selectRJDButton() {
+        getRJDButton().scrollTo();
         getRJDButton().click();
     }
 
@@ -171,6 +192,22 @@ public class PDPageObject {
         }
     }
 
+    public void enterAddressOneField(String address) {
+        if (getAddressOneField().exists()) {
+            getAddressOneField().sendKeys(address);
+        }
+    }
 
+    public void enterCityField(String city) {
+        if (getCityField().exists()) {
+            getCityField().sendKeys(city);
+        }
+    }
+
+    public void enterPostalCodeField(String postalCode) {
+        if (getPostalCodeField().exists()) {
+            getPostalCodeField().sendKeys(postalCode);
+        }
+    }
 
 }

@@ -14,6 +14,7 @@ public class BCPPageObject {
 
     public void selectPDButton() {
         getPDButton().waitUntil(Condition.visible, 15000);
+        getPDButton().scrollTo();
         getPDButton().click();
     }
 

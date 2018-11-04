@@ -30,6 +30,9 @@ public class PDPSteps {
         test.getPdPageObject().selectPrefixFieldElement();
         test.getPdPageObject().enterNumber(test.getUser().getPhonenumber());
         test.getPdPageObject().selectNextButton();
+        test.getPdPageObject().enterAddressOneField(test.getUser().getAddress());
+        test.getPdPageObject().enterCityField(test.getUser().getCity());
+        test.getPdPageObject().enterPostalCodeField(test.getUser().getPostalCode());
     }
 
     @And("^I click Review journey details$")

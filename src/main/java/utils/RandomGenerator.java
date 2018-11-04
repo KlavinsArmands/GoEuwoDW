@@ -23,6 +23,12 @@ public class RandomGenerator {
         return RandomStringUtils.random(8, false, true);
     }
 
+    public static String generateRandomText() {
+        return RandomStringUtils.random(7,true,false);
+    }
+
+
+
     public static int generateRandomBDay() {
         int min = 1;
         int max = 31;
