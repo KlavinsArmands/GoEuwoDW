@@ -28,8 +28,12 @@ public class PDPageObject {
         return $(By.xpath("//div[@class='Select_container_dc849']"));
     }
 
+    private SelenideElement getOldCountryField() {
+        return $(By.xpath("//div[@class='Select_container_d40a7']"));
+    }
+
     private SelenideElement getCountryFieldElement() {
-        return $(By.xpath("//select[@class='Select_select_dc849']"));
+        return $(By.xpath("//select[@name='passengers.0.components.countryOfResidence[0].countryCode']//option[contains(text(), 'Latvia')]"));
     }
 
 
@@ -99,15 +103,20 @@ public class PDPageObject {
     }
 
     public void selectCountryField() {
-        getCountryField().click();
+        if (getCountryField().exists()) {
+            getCountryField().click();
+        } else {
+            getOldCountryField().click();
+        }
     }
 
     public void selectCountryFieldElement() {
-        getCountryFieldElement().selectOptionContainingText("Latvia");
+        getCountryFieldElement().click();
     }
 
 
     public void selectRJDButton() {
+        getRJDButton().scrollTo();
         getRJDButton().click();
     }
 
