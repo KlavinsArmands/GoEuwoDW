@@ -1,12 +1,22 @@
 package stepdefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
+import general.TestContext;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PaymentSteps {
+
+    private TestContext test;
+
+    public PaymentSteps(TestContext testContext) {
+        this.test = testContext;
+    }
+
     @Then("^Review and Pay page is visible$")
-    public void reviewAndPayPageIsVisible() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void reviewAndPayPageIsVisible() {
+        test.getPaymentPageObject().isPMLabelVisible();
+        assertThat(test.getPaymentPageObject().isEmailVisible(test.getUser().getEmailAddress())).isTrue();
+        assertThat(test.getPaymentPageObject().isLabelVisible()).isTrue();
     }
 }

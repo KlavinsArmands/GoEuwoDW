@@ -19,6 +19,7 @@ public class PDPSteps {
         test.getPdPageObject().enterEmail(test.getUser().getEmailAddress());
         test.getPdPageObject().selectCountryField();
         test.getPdPageObject().selectCountryFieldElement();
+        test.getPdPageObject().selectPrefixFieldElement();
         test.getPdPageObject().selectIDField();
         test.getPdPageObject().selectIDFieldElement();
         test.getPdPageObject().enterIDNumber(test.getUser().getPassport());
@@ -28,6 +29,7 @@ public class PDPSteps {
         test.getPdPageObject().selectPrefixField();
         test.getPdPageObject().selectPrefixFieldElement();
         test.getPdPageObject().enterNumber(test.getUser().getPhonenumber());
+        test.getPdPageObject().selectNextButton();
     }
 
     @And("^I click Review journey details$")

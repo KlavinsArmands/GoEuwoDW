@@ -25,12 +25,13 @@ public class PDPageObject {
     }
 
     private SelenideElement getCountryField() {
-        return $(By.xpath("//select[@name='passengers.0.components.countryOfResidence[0].countryCode']"));
+        return $(By.xpath("//div[@class='Select_container_dc849']"));
     }
 
     private SelenideElement getCountryFieldElement() {
-        return $(By.xpath("//select[@class='Select_select_d40a7']//option[contains(text(), 'Latvia')]"));
+        return $(By.xpath("//select[@class='Select_select_dc849']"));
     }
+
 
     private SelenideElement getRJDButton() {
         return $(By.xpath("//button[@type='submit']"));
@@ -72,6 +73,10 @@ public class PDPageObject {
         return $(By.xpath("//input[@placeholder='YYYY']"));
     }
 
+    private SelenideElement getNextButton() {
+        return $(By.xpath("//div[@class='Button_contents_556f2']//span[contains(text(), 'Next')]/../.."));
+    }
+
 
     public void selectRadioButton() {
         if (getRadioButton().exists()) {
@@ -98,8 +103,9 @@ public class PDPageObject {
     }
 
     public void selectCountryFieldElement() {
-        getCountryFieldElement().click();
+        getCountryFieldElement().selectOptionContainingText("Latvia");
     }
+
 
     public void selectRJDButton() {
         getRJDButton().click();
@@ -156,6 +162,12 @@ public class PDPageObject {
     public void enterBYearField(int byear) {
         if (getBYearField().exists()) {
             getBYearField().sendKeys(String.valueOf(byear));
+        }
+    }
+
+    public void selectNextButton() {
+        if (getNextButton().exists()) {
+            getNextButton().click();
         }
     }
 

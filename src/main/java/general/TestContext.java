@@ -4,6 +4,7 @@ package general;
 import lombok.Data;
 import pages.bcppage.BCPPageObject;
 import pages.landingpage.LandingPageObject;
+import pages.payment.PaymentPageObject;
 import pages.pdpage.PDPageObject;
 import pages.searchresults.SearchResultsPageObject;
 
@@ -16,6 +17,7 @@ public class TestContext {
     private SearchResultsPageObject searchResultsPageObject;
     private BCPPageObject bcpPageObject;
     private PDPageObject pdPageObject;
+    private PaymentPageObject paymentPageObject;
 
     public TestContext() {
         this.user = new User();
@@ -24,6 +26,7 @@ public class TestContext {
         this.searchResultsPageObject = new SearchResultsPageObject();
         this.bcpPageObject = new BCPPageObject();
         this.pdPageObject = new PDPageObject();
+        this.paymentPageObject = new PaymentPageObject();
 
     }
 
