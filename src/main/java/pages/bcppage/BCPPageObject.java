@@ -1,5 +1,6 @@
 package pages.bcppage;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -12,6 +13,7 @@ public class BCPPageObject {
     }
 
     public void selectPDButton() {
+        getPDButton().waitUntil(Condition.visible, 15000);
         getPDButton().click();
     }
 
