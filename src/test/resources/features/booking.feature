@@ -1,8 +1,8 @@
 Feature: This feature is about successful booking of trip
   Scenario: Successful booking
     Given I am in homepage
-    And I set London as departure place
-    And I set Paris as arrival place
+    And I set Madrid as departure place
+    And I set Barcelona as arrival place
     And I unselect accommodation search
     When I click Search button
     And I select departure date

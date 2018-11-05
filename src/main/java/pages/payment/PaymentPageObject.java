@@ -23,7 +23,15 @@ public class PaymentPageObject {
     public void isPMLabelVisible() {
         getPMLabel().waitUntil(Condition.visible, 30000);
     }
+/*
+    private SelenideElement getName(String firstName) {
+        return $(By.xpath("//div[@data-e2e='passenger-details-review-name'][contains(text(), '"+firstName+"')]"));
+    }
 
+    private SelenideElement getLastName(String lastName) {
+        return $(By.xpath("//div[@data-e2e='passenger-details-review-name'][contains(text(), '"+lastName+"')]"));
+    }
+*/
 
     public boolean isEmailVisible(String emailAddress) {
         return getEmail(emailAddress).isDisplayed();
@@ -32,4 +40,13 @@ public class PaymentPageObject {
     public boolean isLabelVisible() {
         return getLabel().isDisplayed();
     }
+/*
+    public boolean isNameVisible(String firstName) {
+        return getName(firstName).isDisplayed();
+    }
+
+    public boolean isLastNameVisible(String lastName) {
+        return getLastName(lastName).isDisplayed();
+    }
+*/
 }

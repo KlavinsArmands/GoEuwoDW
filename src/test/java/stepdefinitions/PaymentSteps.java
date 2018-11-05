@@ -18,5 +18,7 @@ public class PaymentSteps {
         test.getPaymentPageObject().isPMLabelVisible();
         assertThat(test.getPaymentPageObject().isEmailVisible(test.getUser().getEmailAddress())).isTrue();
         assertThat(test.getPaymentPageObject().isLabelVisible()).isTrue();
+        //assertThat(test.getPaymentPageObject().isNameVisible(test.getUser().getFirstName())).isTrue();
+        //assertThat(test.getPaymentPageObject().isLastNameVisible(test.getUser().getLastName())).isTrue();
     }
 }
