@@ -13,9 +13,9 @@ public class PDPSteps {
 
     @And("^I fill in Passenger Details page$")
     public void iFillInPassengerDetailsPage() {
-        test.getPdPageObject().selectRadioButton();
         test.getPdPageObject().enterFirstName(test.getUser().getFirstName());
         test.getPdPageObject().enterLastName(test.getUser().getLastName());
+        test.getPdPageObject().selectRadioButton();
         test.getPdPageObject().enterEmail(test.getUser().getEmailAddress());
         test.getPdPageObject().selectCountryField();
         test.getPdPageObject().selectCountryFieldElement();
@@ -33,6 +33,8 @@ public class PDPSteps {
         test.getPdPageObject().enterAddressOneField(test.getUser().getAddress());
         test.getPdPageObject().enterCityField(test.getUser().getCity());
         test.getPdPageObject().enterPostalCodeField(test.getUser().getPostalCode());
+        test.getPdPageObject().selectCountryOfBirthField();
+        test.getPdPageObject().selectCountryOfFieldElement();
     }
 
     @And("^I click Review journey details$")

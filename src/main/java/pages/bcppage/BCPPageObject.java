@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Selenide.$;
 public class BCPPageObject {
 
     private SelenideElement getPDButton() {
-        return $(By.xpath("//button[@type='button']"));
+        return $(By.xpath("//button[@data-e2e='bookButton']"));
     }
 
     public void selectPDButton() {
-        getPDButton().waitUntil(Condition.visible, 15000);
+        getPDButton().waitUntil(Condition.visible, 30000);
         getPDButton().scrollTo();
         getPDButton().click();
     }
