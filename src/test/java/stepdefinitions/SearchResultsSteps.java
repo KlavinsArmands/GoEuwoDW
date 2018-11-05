@@ -11,8 +11,16 @@ public class SearchResultsSteps {
         this.test = testContext;
     }
 
+    @And("^I select departure date$")
+    public void iSelectDepartureDate() {
+        test.getSearchResultsPageObject().selectCalendarField();
+        test.getSearchResultsPageObject().selectCalendarFieldDate(test.getBooking().getDate());
+        test.getSearchResultsPageObject().selectSearchButton();
+    }
+
     @And("^I select first train available$")
     public void iSelectFirstTrainAvailable() {
         test.getSearchResultsPageObject().selectTrip();
     }
+
 }
