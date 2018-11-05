@@ -15,7 +15,7 @@ public class SearchResultsPageObject {
     }
 
     public BCPPageObject selectTrip(){
-        getTrip().waitUntil(Condition.visible, 15000);
+        getTrip().waitUntil(Condition.visible, 30000);
         getTrip().click();
         return page(BCPPageObject.class);
     }

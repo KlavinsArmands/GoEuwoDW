@@ -21,7 +21,7 @@ public class PaymentPageObject {
     }
 
     public void isPMLabelVisible() {
-        getPMLabel().waitUntil(Condition.visible, 15000);
+        getPMLabel().waitUntil(Condition.visible, 30000);
     }
 
 

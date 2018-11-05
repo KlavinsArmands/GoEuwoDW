@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class PDPageObject {
 
     private SelenideElement getRadioButton() {
-        return $(By.xpath("//div[contains(text(),'Mrs/Ms')]/.."));
+        return $(By.xpath("(//div[@class='RadioButton_radioButton_db13b']//div[@class='RadioButton_icon_db13b'])[1]"));
     }
 
     private SelenideElement getFirstNameField() {
@@ -81,6 +81,14 @@ public class PDPageObject {
         return $(By.xpath("//div[@class='Button_contents_556f2']//span[contains(text(), 'Next')]/../.."));
     }
 
+    private SelenideElement getCountryOfBirthField() {
+        return $(By.xpath("//select[@name='passengers.0.components.placeOfBirth[0].countryCode']/.."));
+    }
+
+    private SelenideElement getCountryOfBirthFieldElement() {
+        return $(By.xpath("//select[@name='passengers.0.components.placeOfBirth[0].countryCode']//option[contains(text(), 'Latvia')]"));
+    }
+
     private SelenideElement getAddressOneField() {
         return $(By.xpath("//input[@id='address1']"));
     }
@@ -102,7 +110,7 @@ public class PDPageObject {
     }
 
     public void enterFirstName(String firstname){
-        getFirstNameField().waitUntil(Condition.visible,15000);
+        getFirstNameField().waitUntil(Condition.visible,30000);
         getFirstNameField().sendKeys(firstname);
     }
 
@@ -207,6 +215,18 @@ public class PDPageObject {
     public void enterPostalCodeField(String postalCode) {
         if (getPostalCodeField().exists()) {
             getPostalCodeField().sendKeys(postalCode);
+        }
+    }
+
+    public void selectCountryOfBirthField() {
+        if (getCountryOfBirthField().exists()) {
+            getCountryOfBirthField().click();
+        }
+    }
+
+    public void selectCountryOfFieldElement() {
+        if (getCountryOfBirthFieldElement().exists()) {
+            getCountryOfBirthFieldElement().click();
         }
     }
 
