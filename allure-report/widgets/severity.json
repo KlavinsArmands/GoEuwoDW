@@ -1,0 +1,11 @@
+[ {
+  "uid" : "50215a3b4057d1cc",
+  "name" : "Successful booking",
+  "time" : {
+    "start" : 1546947415874,
+    "stop" : 1546947469197,
+    "duration" : 53323
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

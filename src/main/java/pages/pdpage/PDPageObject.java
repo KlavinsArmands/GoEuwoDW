@@ -28,9 +28,6 @@ public class PDPageObject {
         return $(By.xpath("//div[@class='Select_container_dc849']"));
     }
 
-    private SelenideElement getOldCountryField() {
-        return $(By.xpath("//div[@class='Select_container_d40a7']"));
-    }
 
     private SelenideElement getCountryFieldElement() {
         return $(By.xpath("//select[@name='passengers.0.components.countryOfResidence[0].countryCode']//option[contains(text(), 'Latvia')]"));
@@ -101,6 +98,10 @@ public class PDPageObject {
         return $(By.xpath("//input[@id='zipCode']"));
     }
 
+    private SelenideElement getPriceChangeContinue() {
+        return $(By.xpath("//button[@type='button']//span[contains(text(), 'Continue')]"));
+    }
+
 
     public void selectRadioButton() {
         if (getRadioButton().exists()) {
@@ -125,8 +126,6 @@ public class PDPageObject {
     public void selectCountryField() {
         if (getCountryField().exists()) {
             getCountryField().click();
-        } else {
-            getOldCountryField().click();
         }
     }
 
@@ -227,6 +226,12 @@ public class PDPageObject {
     public void selectCountryOfFieldElement() {
         if (getCountryOfBirthFieldElement().exists()) {
             getCountryOfBirthFieldElement().click();
+        }
+    }
+
+    public void selectPriceChangeContinue() {
+        if (getPriceChangeContinue().exists()) {
+            getPriceChangeContinue().click();
         }
     }
 

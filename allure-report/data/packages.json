@@ -1,0 +1,21 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "This feature is about successful booking of trip",
+    "children" : [ {
+      "name" : "Successful booking",
+      "uid" : "50215a3b4057d1cc",
+      "parentUid" : "0eb6142670a969dd2a546f37cf8f2fb4",
+      "status" : "failed",
+      "time" : {
+        "start" : 1546947415874,
+        "stop" : 1546947469197,
+        "duration" : 53323
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "0eb6142670a969dd2a546f37cf8f2fb4"
+  } ]
+}

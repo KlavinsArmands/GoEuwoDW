@@ -32,7 +32,7 @@ public class LandingPageObject {
     }
 
     private SelenideElement getSearchButton() {
-        return $(".GoButton_contents_76S3C > span");
+        return $(By.xpath("//div[@class='Button_contents_8aaee']//span[contains(text(),'Search')]"));
     }
 
     public boolean isLabelVisible() {

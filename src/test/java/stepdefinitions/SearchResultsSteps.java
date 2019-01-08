@@ -13,13 +13,14 @@ public class SearchResultsSteps {
 
     @And("^I select departure date$")
     public void iSelectDepartureDate() {
-        test.getSearchResultsPageObject().selectCalendarField();
-        test.getSearchResultsPageObject().selectCalendarFieldDate(test.getBooking().getDate());
-        test.getSearchResultsPageObject().selectSearchButton();
+       // test.getSearchResultsPageObject().selectCalendarField();
+       // test.getSearchResultsPageObject().selectCalendarFieldDate(test.getBooking().getDate());
+       // test.getSearchResultsPageObject().selectSearchButton();
     }
 
-    @And("^I select first train available$")
-    public void iSelectFirstTrainAvailable() {
+    @And("^I select first ([^\\\"]*) available$")
+    public void iSelectFirstTrainAvailable(String transportMode) {
+        test.getSearchResultsPageObject().selectTransportMode(transportMode);
         test.getSearchResultsPageObject().selectTrip();
     }
 

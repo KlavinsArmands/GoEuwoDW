@@ -13,7 +13,7 @@ public class PaymentPageObject {
     }
 
     private SelenideElement getEmail(String emailAddress) {
-        return $(By.xpath("//b[contains(text(),'"+emailAddress+"')]"));
+        return $(By.xpath("//div[@class='Tips_body_15aa1' and contains(text(),'"+emailAddress+"')]"));
     }
 
     private SelenideElement getLabel() {

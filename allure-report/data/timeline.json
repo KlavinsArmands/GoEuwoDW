@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-Q1TBU05",
+    "children" : [ {
+      "name" : "2408@DESKTOP-Q1TBU05.main(1)",
+      "children" : [ {
+        "name" : "Successful booking",
+        "uid" : "50215a3b4057d1cc",
+        "parentUid" : "15b9439a0a5562b863e8ea6edd7d77f2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1546947415874,
+          "stop" : 1546947469197,
+          "duration" : 53323
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "15b9439a0a5562b863e8ea6edd7d77f2"
+    } ],
+    "uid" : "285793a56ee4a68f45754a48e901e913"
+  } ]
+}

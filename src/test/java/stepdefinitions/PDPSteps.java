@@ -35,6 +35,7 @@ public class PDPSteps {
         test.getPdPageObject().enterPostalCodeField(test.getUser().getPostalCode());
         test.getPdPageObject().selectCountryOfBirthField();
         test.getPdPageObject().selectCountryOfFieldElement();
+        test.getPdPageObject().selectPriceChangeContinue();
     }
 
     @And("^I click Review journey details$")
