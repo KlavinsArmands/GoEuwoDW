@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Element not found {By.xpath: //input[@name='passengers.0.components.name[0].first']}\nExpected: visible",
+      "children" : [ {
+        "name" : "Successful booking",
+        "uid" : "50215a3b4057d1cc",
+        "parentUid" : "f29734d3a6bad3f9f921da3fb8baf9fa",
+        "status" : "failed",
+        "time" : {
+          "start" : 1546947415874,
+          "stop" : 1546947469197,
+          "duration" : 53323
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f29734d3a6bad3f9f921da3fb8baf9fa"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

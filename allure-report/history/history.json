@@ -1,0 +1,22 @@
+{
+  "10f6a723180eb33e09210818cd1b7926" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "50215a3b4057d1cc",
+      "status" : "failed",
+      "statusDetails" : "Element not found {By.xpath: //input[@name='passengers.0.components.name[0].first']}\nExpected: visible",
+      "time" : {
+        "start" : 1546947415874,
+        "stop" : 1546947469197,
+        "duration" : 53323
+      }
+    } ]
+  }
+}
