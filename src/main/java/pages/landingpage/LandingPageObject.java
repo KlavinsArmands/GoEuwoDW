@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.page;
 public class LandingPageObject {
 
     private SelenideElement getLabel() {
-        return $(".MainHero__rebrandedHeadline___3ubph> span");
+        return $(By.xpath("//div[@class='Header__logoContainer___2ztf7']"));
     }
 
 

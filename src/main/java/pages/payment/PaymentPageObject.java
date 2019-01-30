@@ -20,6 +20,10 @@ public class PaymentPageObject {
         return $(By.xpath("//span[contains(text(),'Review and Pay')]"));
     }
 
+    private SelenideElement getCardField() {
+        return $(By.xpath("//div[@role='radiogroup']//div[1]//label[1]"));
+    }
+
     public void isPMLabelVisible() {
         getPMLabel().waitUntil(Condition.visible, 30000);
     }
@@ -39,6 +43,10 @@ public class PaymentPageObject {
 
     public boolean isLabelVisible() {
         return getLabel().isDisplayed();
+    }
+
+    public void selectCardField() {
+        getCardField().click();
     }
 /*
     public boolean isNameVisible(String firstName) {

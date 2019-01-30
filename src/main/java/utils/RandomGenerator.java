@@ -48,12 +48,12 @@ public class RandomGenerator {
     }
 
     public static int generateRandomBYear() {
-        int min = 1919;
+     /*   int min = 1919;
         int max = 2000;
         Random rn = new Random();
         int range = max - min + 1;
-        int randomNum =  rn.nextInt(range) + min;
-        return randomNum;
+        int randomNum =  rn.nextInt(range) + min; */
+        return 1920;
     }
 
 }
