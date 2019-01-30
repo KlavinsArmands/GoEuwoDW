@@ -19,15 +19,23 @@ public class SearchResultsPageObject {
     }
 */
     private SelenideElement getTransportMode(String transportMode) {
-        return $(By.xpath("//span[contains(text(),'"+transportMode+"')]"));
+        return $(By.xpath("//div[@class='travelModeName___HuG32']//span[contains(text(),'"+transportMode+"')]"));
     }
 
 /*    private SelenideElement getSearchButton() {
         return $(By.xpath("//button[@data-e2e='buttonSearch']"));
     }
 */
-    private SelenideElement getTrip () {
-        return $(By.xpath("//div[contains(@data-e2e, 'resultCell')]"));
+    private SelenideElement getTrip() {
+        return $(By.xpath("//div[contains(@data-e2e, 'resultCell')][4]"));
+    }
+
+    private SelenideElement getFilterButton() {
+        return $(By.xpath("//div[@class='sortPanel___xVjP7']//div//button[@type='button']"));
+    }
+
+    private SelenideElement getProviderInFilter(String provider) {
+        return $(By.xpath("//div[contains(text(),'"+provider+"')]"));
     }
 /*
     public void selectCalendarField(){
@@ -51,6 +59,16 @@ public class SearchResultsPageObject {
         getTrip().waitUntil(Condition.visible, 30000);
         getTrip().click();
         return page(BCPPageObject.class);
+    }
+
+    public void selectFilterButton() {
+        getFilterButton().click();
+    }
+
+    public void selectProviderInFilter(String provider) {
+        getProviderInFilter(provider).waitUntil(Condition.visible,40000);
+        getProviderInFilter(provider).scrollTo();
+        getProviderInFilter(provider).click();
     }
 
 }

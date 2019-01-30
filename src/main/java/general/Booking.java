@@ -8,6 +8,7 @@ public class Booking {
     private String toField;
     private String date;
     private String transportMode;
+    private String provider;
 
     public Booking() {
         this.date = "20-00-2019"; //month is real month-1(eg. dec(12) is typed as 11

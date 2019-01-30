@@ -18,9 +18,19 @@ public class SearchResultsSteps {
        // test.getSearchResultsPageObject().selectSearchButton();
     }
 
-    @And("^I select first ([^\\\"]*) available$")
-    public void iSelectFirstTrainAvailable(String transportMode) {
+    @And("^I select ([^\\\"]*) tab$")
+    public void iSelectBusesTab(String transportMode) {
         test.getSearchResultsPageObject().selectTransportMode(transportMode);
+    }
+
+    @And("^I select ([^\\\"]*) provider$")
+    public void iSelectOuibusProvider(String provider) {
+        test.getSearchResultsPageObject().selectFilterButton();
+        test.getSearchResultsPageObject().selectProviderInFilter(provider);
+    }
+
+    @And("^I select first offer available$")
+    public void iSelectFirstTrainAvailable() {
         test.getSearchResultsPageObject().selectTrip();
     }
 
